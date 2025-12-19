@@ -1,8 +1,8 @@
 package h1;
 
 public class Patient {
-    String name;
-    int prio;
+    public String name;
+    public int prio;
 
     public Patient(String name, int prio){
         this.name = name;
