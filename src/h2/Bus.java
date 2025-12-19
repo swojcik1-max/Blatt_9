@@ -11,7 +11,7 @@ public class Bus {
     public void enterBus(Passenger p){
         passengers.add(p);
     }
-    public void exitBus(){
+    private void exitBus(){
         ArrayList<Passenger> toRemove = new ArrayList<>();
         for(int i = 0; i < passengers.size(); i++){
             if (passengers.get(i).visited == passengers.get(i).planned) {
