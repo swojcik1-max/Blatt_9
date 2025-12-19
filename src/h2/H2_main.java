@@ -18,7 +18,6 @@ public class H2_main {
         busA.enterBus(anna);
         busA.enterBus(ben);
         busA.nextStop(b);
-        busB.enterBus(carter);
 
         //busA.nextStop();
         //busA.nextStop();
