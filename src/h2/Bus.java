@@ -53,11 +53,14 @@ public class Bus {
         for (int i = 0; i < passengers.size(); i++) {
             for (int x = 0; x < passengerNames.length; x++) {
                 if (passengers.get(i).name.equals(passengerNames[x])) {
-                    otherBus.passengers.add(this.passengers.get(i));
+                    otherBus.enterBus(passengers.get(i));
+                    passengers.remove(i);
+                    i--;
+                    break;
                 }
             }
         }
-        passengers.removeAll(otherBus.passengers);
+
     }
 
     public void printING(){
