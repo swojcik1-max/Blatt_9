@@ -11,7 +11,7 @@ public class PrioListe {
             myList.add(p);
             return;
         }
-        toCompare = myList.getLast();
+        toCompare = myList.get(myList.size()-1);
         if(toCompare.prio < p.prio){
             myList.add(p);
             return;
@@ -29,8 +29,8 @@ public class PrioListe {
         if(myList.isEmpty()){
             return null;
         }
-        Patient first = myList.getFirst();
-        myList.removeFirst();
+        Patient first = myList.get(0);
+        myList.remove(0);
         return first;
 
     }

@@ -12,7 +12,7 @@ public class H1_main {
         list.addPatient(A);
         list.addPatient(B);
         list.addPatient(C);
-        System.out.println(list.getPosition(B));
+        System.out.println(list.getPosition(A));
         list.addPatient(D);
         list.listToString();
     }
