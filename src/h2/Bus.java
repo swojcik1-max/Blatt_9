@@ -25,6 +25,9 @@ public class Bus {
             passengers.get(i).visited ++;
         }
         exitBus();
+        if(boarding == null){
+            return ;
+        }
         for(int x = 0; x < boarding.length; x++){
             passengers.add(boarding[x]);
 
