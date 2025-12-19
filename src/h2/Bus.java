@@ -15,7 +15,7 @@ public class Bus {
         for(int i = 0; i < passengers.size(); i++){
             if (passengers.get(i).visited == passengers.get(i).planned) {
                 passengers.remove(i);
-                i--;
+
             }
         }
     }
@@ -41,7 +41,7 @@ public class Bus {
             if(!passengers.get(i).ticket){
                 removedPassengers.add(passengers.get(i));
                 passengers.remove(i);
-                i--;
+
             }
         }
         return removedPassengers;
@@ -53,7 +53,7 @@ public class Bus {
                 if (passengers.get(i).name.equals(passengerNames[x])) {
                     otherBus.passengers.add(this.passengers.get(i));
                     this.passengers.remove(i);
-                    i--;
+
                 }
             }
         }

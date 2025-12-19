@@ -6,7 +6,7 @@ public class H2_main {
         Bus busB = new Bus();
 
         Passenger anna = new Passenger("Anna", 2, true);
-        Passenger ben = new Passenger("Ben", 1, true);
+        Passenger ben = new Passenger("Ben", 2, true);
         Passenger clara = new Passenger("Clara", 3, true);
         Passenger tim = new Passenger("Tim", 3, false);
         Passenger carter = new Passenger("Carter", 3, true);
@@ -19,12 +19,12 @@ public class H2_main {
         busA.enterBus(ben);
         busA.nextStop(b);
 
-        busA.nextStop();
+        //busA.nextStop();
         //busA.nextStop();
 
         busA.findPassengersWithoutTickets();
 
-        String[] transfer = {"Tim", "Carter", "Bird"};
+        String[] transfer = {"Anna","Ben", "Tim", "Carter", "Bird"};
         busA.transferPassengers(busB, transfer);
         busA.printING();
         busB.printING();
