@@ -12,12 +12,13 @@ public class Bus {
         passengers.add(p);
     }
     public void exitBus(){
+        ArrayList<Passenger> toRemove = new ArrayList<>();
         for(int i = 0; i < passengers.size(); i++){
             if (passengers.get(i).visited == passengers.get(i).planned) {
-                passengers.remove(i);
-
+                toRemove.add(passengers.get(i));
             }
         }
+        passengers.removeAll(toRemove);
     }
     public void nextStop(Passenger [] boarding){
         for(int i = 0; i < passengers.size(); i++){
@@ -40,23 +41,23 @@ public class Bus {
         for(int i = 0; i < passengers.size(); i++){
             if(!passengers.get(i).ticket){
                 removedPassengers.add(passengers.get(i));
-                passengers.remove(i);
-
             }
         }
+        passengers.removeAll(removedPassengers);
         return removedPassengers;
     }
     public void transferPassengers(Bus otherBus, String [] passengerNames) {
-
+        if(passengerNames == null){
+            return;
+        }
         for (int i = 0; i < passengers.size(); i++) {
             for (int x = 0; x < passengerNames.length; x++) {
                 if (passengers.get(i).name.equals(passengerNames[x])) {
                     otherBus.passengers.add(this.passengers.get(i));
-                    this.passengers.remove(i);
-
                 }
             }
         }
+        passengers.removeAll(otherBus.passengers);
     }
 
     public void printING(){
